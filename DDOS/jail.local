@@ -1,0 +1,8 @@
+[network-flood]
+enabled = true
+filter = network-flood
+action = iptables-multiport[name=NetworkFlood, port="all", protocol="all"]
+logpath = /var/log/fail2ban_network_flood.log
+maxretry = 1
+bantime = 3600
+findtime = 10
